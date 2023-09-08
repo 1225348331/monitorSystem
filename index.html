@@ -1,0 +1,27 @@
+<!--
+ * @Description: 
+ * @Date: 2023-09-06 13:39:36
+ * @LastEditTime: 2023-09-08 15:41:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <link rel="stylesheet" href="/src/assets/Cesium/Widgets/widgets.css" />
+    <script src="/src/assets/Cesium/Cesium.js"></script>
+    <script src="/src/assets/Cesium/Kq3dCesiumPlugins.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+  <script>
+    let viewer;
+    Cesium.Ion.defaultAccessToken =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5NjkxNmE3MS1hM2M4LTRjYjQtODc5Ny00NDBlMmU1YzUxOWUiLCJpZCI6MzUwNDAsImlhdCI6MTYwMTI3NjQ5N30.fuppy6ZoXcnjkQFxsKibd1pg_4T_PsdAQcW-C8_FaXg";
+  </script>
+</html>

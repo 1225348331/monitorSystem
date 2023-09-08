@@ -1,0 +1,907 @@
+.cesium-viewer-pickPositonBarContainer {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1999;
+    min-width: 200px;
+    min-height: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #444;
+    background-color: rgba(38, 38, 38, .75);
+    padding: 2px 2px 5px 2px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.cesium-viewer-pickPositonBarContainer :hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cesium-viewer-pickPositonBarContainer .top {
+    border-bottom: 2px dotted #5c5c5b8c;
+    padding: 0 2px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.cesium-viewer-pickPositonBarContainer .top .title {
+    line-height: 28px;
+    text-align: center;
+}
+
+.cesium-viewer-pickPositonBarContainer .top .close {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%) scale(1.4, 1);
+    color: rgba(255, 255, 255, .7);
+    font-size: 16px;
+    margin-top: -2px;
+}
+
+.cesium-viewer-pickPositonBarContainer ._container {
+    text-align: center;
+}
+
+.cesium-viewer-pickPositonBarContainer table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.cesium-viewer-pickPositonBarContainer table tr td {
+    border: 1px solid #4e4e4e;
+    line-height: 32px;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+.cesium-infoBox{
+    z-index: 2;
+}
+
+.cesium-viewer-navigationContainer {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+}
+
+.cesium-viewer-toolbar {
+    z-index: 2 !important;
+}
+
+.scene-compass {
+    pointer-events: auto;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 128px;
+    height: 128px;
+    overflow: hidden;
+}
+
+.scene-compass-outer-ring {
+    cursor: pointer;
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    top: 0px;
+    transform: rotate(0rad);
+    -webkit-transform: rotate(0rad);
+    background-image: url("./Images/Navigation/ring.png");
+}
+
+.scene-compass-outer-ring:active {
+    background-image: url("./Images/Navigation/ring_active.png");
+}
+
+.scene-compass-tilt {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    background-image: url("./Images/Navigation/tilt.png");
+    visibility: hidden;
+}
+
+.cesium-viewer-navigationContainer:hover .scene-compass-tilt {
+    visibility: visible;
+}
+
+.cesium-viewer-navigationContainer:active .scene-compass-tilt {
+    visibility: visible;
+}
+
+.scene-compass-tiltbar {
+    cursor: pointer;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    /*left: 64px;
+    top: 5px;*/
+    background-image: url("./Images/Navigation/tiltbar.png");
+    background-repeat: no-repeat;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.cesium-viewer-navigationContainer:hover .scene-compass-tiltbar {
+    visibility: visible;
+}
+
+.cesium-viewer-navigationContainer:active .scene-compass-tiltbar {
+    visibility: visible;
+}
+
+.scene-compass-arrows {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    top: 0px;
+    background-image: url("./Images/Navigation/compass_active.png");
+    visibility: hidden;
+}
+
+.cesium-viewer-navigationContainer:hover .scene-compass-arrows {
+    visibility: visible;
+}
+
+.cesium-viewer-navigationContainer:active .scene-compass-arrows {
+    visibility: visible;
+}
+
+.arrows_e_active {
+    cursor: pointer;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 52px;
+    left: 68px;
+    visibility: hidden;
+}
+
+.cesium-viewer-navigationContainer:hover .arrows_e_active {
+    visibility: visible;
+}
+
+.cesium-viewer-navigationContainer:active .arrows_e_active {
+    visibility: visible;
+}
+
+.arrows_e_active:active {
+    background-image: url("./Images/Navigation/arrows_e_active.png");
+}
+
+.arrows_n_active {
+    cursor: pointer;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 32px;
+    left: 53px;
+    visibility: hidden;
+}
+
+.arrows_n_active:active {
+    background-image: url("./Images/Navigation/arrows_n_active.png");
+}
+
+.cesium-viewer-navigationContainer:hover .arrows_n_active {
+    visibility: visible;
+}
+
+.cesium-viewer-navigationContainer:active .arrows_n_active {
+    visibility: visible;
+}
+
+.arrows_s_active {
+    cursor: pointer;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 74px;
+    left: 53px;
+    visibility: hidden;
+}
+
+.arrows_s_active:active {
+    background-image: url("./Images/Navigation/arrows_s_active.png");
+}
+
+.cesium-viewer-navigationContainer:hover .arrows_s_active {
+    visibility: visible;
+}
+
+.cesium-viewer-navigationContainer:active .arrows_s_active {
+    visibility: visible;
+}
+
+.arrows_w_active {
+    cursor: pointer;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 52px;
+    left: 35px;
+    visibility: hidden;
+}
+
+.arrows_w_active:active {
+    background-image: url("./Images/Navigation/arrows_w_active.png");
+}
+
+.cesium-viewer-navigationContainer:hover .arrows_w_active {
+    visibility: visible;
+}
+
+.cesium-viewer-navigationContainer:active .arrows_w_active {
+    visibility: visible;
+}
+
+.scene-zoom {
+    position: absolute;
+    width: 30px;
+    height: 150px;
+    background-image: url("./Images/Navigation/zoom.png");
+    top: 130px;
+    right: 60px;
+    visibility: hidden;
+}
+
+.cesium-viewer-navigationContainer:hover .scene-zoom {
+    visibility: visible;
+}
+
+.cesium-viewer-navigationContainer:active .scene-zoom {
+    visibility: visible;
+}
+
+.scene-zoomin {
+    cursor: pointer;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+.scene-zoomin:active {
+    background-image: url("./Images/Navigation/zoom_active_in.png");
+}
+
+.scene-zoomout {
+    cursor: pointer;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    bottom: 0px;
+}
+
+.scene-zoomout:active {
+    background-image: url("./Images/Navigation/zoom_active_out.png");
+}
+
+.scene-zoombar {
+    cursor: pointer;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 65px;
+    background-image: url("./Images/Navigation/zoombar.png");
+}
+/** 场景分享面板样式 */
+.cesium-viewer-share-container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 999;
+    background-color: rgba(43, 42, 42, 0.75);
+    border: 1px solid rgb(75, 74, 74);
+    min-width: fit-content;
+    height: fit-content;
+    color: #edffff;
+    fill: #edffff;
+    box-shadow: 0 0 10px rgb(87, 87, 87);
+    /* -webkit-box-reflect: below 0 -webkit-linear-gradient(transparent, transparent 75%, rgba(255, 255, 255, .3)); */
+    transition: all 1.0s;
+    width: 40%;
+}
+
+.cesium-viewer-share-container hr {
+    margin: 0px 0 0px 0px;
+    border: none;
+    border-top: 1px dotted #7987a7c7;
+    background-color: transparent;
+}
+
+.cesium-viewer-share-container .title {
+    padding: 5px;
+    font-size: 16px;
+    position: relative;
+}
+
+.cesium-viewer-share-container .title .close {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%) scale(1.4, 1);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cesium-viewer-share-container .title .close:hover {
+    color: rgb(3, 168, 245);
+}
+
+.cesium-viewer-share-container .sub-title {
+    padding: 5px 0;
+    font-size: 14px;
+    text-align: left;
+    color: #d8dddd;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .link-container {
+    width: calc(100% - 165px);
+    float: left;
+    padding: 5px 10px 5px 10px;
+    box-sizing: border-box;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .link-container textarea,
+.cesium-viewer-share-container .cesium-viewer-share .link-container input[type=text] {
+    background-color: #ffffffbd;
+    resize: none;
+    width: 100%;
+    min-width: 280px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid rgb(92, 91, 91);
+    border: none;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .link-container .textarea {
+    /* height: 112px; */
+    height: 76px;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .link-container .short-textarea {
+    height: 29px;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .link-container button {
+    /* display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    border-radius: 4px; */
+    color: #fff;
+    background-color: #67c23a;
+    border-color: #67c23a;
+    font-size: 14px;
+    float: right;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .qrcode-container {
+    width: 165px;
+    float: left;
+    border-left: 1px dotted #7987a7c7;
+    padding: 5px 10px 10px 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .qrcode-img {
+    /* background-color: blanchedalmond; */
+    background-color: #ffffff;
+    /* padding: 3px; */
+    width: 124px;
+    height: 124px;
+    margin-top: 5px;
+    vertical-align: baseline;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .qrcode-container .tip {
+    font-size: 13px;
+    color: rgb(12, 214, 186);
+    line-height: 18px;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .qrcode-container .tip .sbtn {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .qrcode-container .tip .sbtn:hover {
+    color: rgb(5, 194, 252);
+    font-weight: 600;
+}
+
+.cesium-viewer-share-container .cesium-viewer-share .tips {
+    clear: both;
+    font-size: 12px;
+    padding: 2px 10px 8px 10px;
+    color: #faebd7b3;
+}
+.cesium-viewer-cesiumWidgetContainer .cesium-widget canvas {
+    /*cursor: url(./Images/Cursor/idle.cur), auto;*/
+}
+
+/*
+.cesium-viewer-cesiumWidgetContainer .cesium-widget canvas:active{
+    cursor: url(../Images/Cursor/Pan.cur),auto;
+}*/
+
+.cesium-viewer .cesium-viewer-bottom .cesium-widget-credits .cesium-credit-textContainer {
+    display: none !important;
+}
+
+.cesium-viewer-bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 60px !important;
+    padding-right: 5px;
+    z-index: 1;
+}
+.cesium-viewer .cesium-widget-credits {
+  display: inline;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-right: 0;
+  color: #ffffff;
+  font-size: 10px;
+  text-shadow: 0 0 2px #000000;
+}
+
+/* 全景查看窗口 */
+
+.cesium-photo-sphere-viewer * {
+    box-sizing: content-box !important;
+}
+
+/* 屏幕中心十字丝 */
+
+.cesium-viewer-center-cross-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* z-index: 2; */
+    width: 10px;
+    height: 10px
+}
+
+.cesium-viewer-center-cross-container span.horizontal-line {
+    width: 10px;
+    height: 2px;
+    display: inline-block;
+    top: 4px;
+    border-radius: 1px;
+    background-color: #01da5bb3;
+    position: absolute;
+}
+
+.cesium-viewer-center-cross-container span.vertical-line {
+    width: 2px;
+    height: 10px;
+    display: inline-block;
+    left: 4px;
+    border-radius: 1px;
+    background-color: #01da5bb3;
+    position: absolute;
+}
+
+/************ 原有属性样式简单修改 ********************/
+
+.cesium-infoBox {
+    background: rgba(38, 38, 38, 0.75) !important;
+}
+
+.cesium-infoBox .cesium-infoBox-title {
+    background: #545454a3 !important;
+    ;
+}
+
+.cesium-infoBox .cesium-infoBox-iframe {
+    background: transparent !important;
+}
+
+.cesium-infoBox-description {
+    padding: 4px 4px !important;
+}
+
+.cesium-infoBox-defaultTable tr:nth-child(odd) {
+    background-color: rgba(84, 84, 84, 0.7);
+}
+
+/* 帧数框 */
+
+.cesium-performanceDisplay-defaultContainer {
+    position: absolute;
+    top: 8px;
+    /* bottom: 30px; */
+    right: 129px;
+    text-align: right;
+}
+
+.cesium-performanceDisplay-ms {
+    color: #de3;
+    display: inline-block;
+}
+
+.cesium-performanceDisplay-fps {
+    color: #e52;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.cesium-performanceDisplay-throttled {
+    color: #a42;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* 参数提示框 */
+
+.cesium-param-state-tips-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: inherit;
+    font-size: 16px;
+    color: rgb(255, 228, 196, 0.75);
+    padding: 5px 10px;
+    background-color: #0000004a;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #fbfbfb47;
+    text-align: left;
+}
+
+@media screen and (max-width: 1000px) {
+    .cesium-viewer .cesium-viewer-statusContainer {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cesium-viewer-navigationContainer {
+        transform: scale(0.8);
+        transform-origin: right top;
+        animation: all .5s;
+    }
+    .cesium-credit-logoContainer img {
+        transform: scale(0.8);
+        transform-origin: left bottom;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .cesium-viewer .cesium-viewer-bottom {
+        display: none !important;
+    }
+    .cesium-viewer-navigationContainer {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .cesium-infoBox {
+        bottom: 0;
+        top: auto;
+        left: 0px;
+        width: auto;
+        max-width: 100% !important;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        right: 0px;
+        height: 30%;
+    }
+    .cesium-infoBox .cesium-infoBox-iframe {
+        height: calc(100% - 32px) !important;
+    }
+}
+.cesium-viewer-viewerShutters{
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  width: 5px;
+  cursor: ew-resize;
+  height: 100%;
+  background-color: #D3D3D3;
+}
+/* initial twipsy code taken from bootstrap */
+
+.twipsy {
+    display: block;
+    position: absolute;
+    visibility: visible;
+    max-width: 200px;
+    min-width: 100px;
+    padding: 5px;
+    font-size: 11px;
+    z-index: 1000;
+    opacity: 0.8;
+    -khtml-opacity: 0.8;
+    -moz-opacity: 0.8;
+    filter: alpha(opacity=80);
+    pointer-events: none;
+}
+
+.twipsy.left .twipsy-arrow {
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #000000;
+}
+
+.twipsy.right .twipsy-arrow {
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #000000;
+}
+
+.twipsy-inner {
+    padding: 3px 8px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    max-width: 200px;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.twipsy-inner p {
+    margin: 2px;
+}
+
+.twipsy-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+/*
+css rules for the draw helper components
+*/
+
+.toolbar {
+    margin: 0px;
+    padding: 0px;
+    background: white;
+}
+
+.toolbar>.button {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.toolbar>.button:hover {
+    background: #eee;
+}
+
+/*
+css rules for the infowindow
+*/
+
+.infoWindow {
+    position: absolute;
+    min-width: 100px;
+    max-width: 300px;
+}
+
+.infoWindow #frame {
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+}
+
+.infoWindow #close {
+    float: right;
+    margin: 5px 2px;
+    font-size: small;
+    color: gray;
+    cursor: pointer;
+}
+
+.infoWindow #arrow {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -10px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid white;
+}
+.cesium-zoom-wrapper {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s 0.2s,opacity 0.2s ease-in;
+    -moz-transition: visibility 0s 0.2s,opacity 0.2s ease-in;
+    transition: visibility 0s 0.2s,opacity 0.2s ease-in;
+}
+
+.cesium-zoom-wrapper-visible {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+.cesium-viewer-statusContainer {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: 8px;
+    height: 20px;
+    line-height: 24px;
+    padding: 0px 5px 0px 5px;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 11px;
+    font-family: sans-serif, Arial, Helvetica, ubunturegular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #ffffff;
+    text-decoration: none;
+    user-select: text;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.cesium-viewer-statusContainer .statusBarCell {
+    float: right;
+    padding-left: 3px;
+    padding-right: 3px;
+    /*padding: 0px 2px 0px 10px;*/
+    border: 0px rgba(255, 255, 255, .5);
+    border-style: none none none solid;
+    text-align: center;
+}
+
+.cesium-viewer-statusContainer .collection.statusBarCell {
+    float: right;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.cesium-viewer-statusContainer .statusBarCell.split {
+    float: right;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cesium-viewer-statusContainer .statusBarCell.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cesium-status-scaleCtrl {
+    position: initial;
+    width: 70px;
+    height: 20px;
+    bottom: 10px;
+    left: 10px;
+    margin-top: -5px;
+    -moz-user-select: none;
+    z-index: 10;
+}
+
+.cesium-status-scaleCtrl div.cesium-status-scaleTxt {
+    font-size: 11px;
+    font-family: Arial, sans-serif
+}
+
+.cesium-status-scaleCtrl div {
+    position: absolute;
+    overflow: hidden
+}
+
+.cesium-status-scaleBar {
+    background: #000
+}
+
+.cesium-status-scaleBarBG {
+    background: #fff
+}
+
+.cesium-status-scaleHBar {
+    height: 3px;
+    font-size: 0;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+}
+
+.cesium-status-scaleHBarBG {
+    width: 100%;
+    height: 5px;
+    font-size: 0;
+    bottom: 0;
+}
+
+.cesium-status-scaleLBar,
+.cesium-status-scaleRBar {
+    width: 1px;
+    height: 5px;
+    bottom: 1px;
+    font-size: 0
+}
+
+.cesium-status-scaleLBarBG,
+.cesium-status-scaleRBarBG {
+    width: 3px;
+    height: 7px;
+    bottom: 0px;
+    font-size: 0
+}
+
+.cesium-status-scaleLBar {
+    left: 1px;
+}
+
+.cesium-status-scaleRBar {
+    right: 1px;
+}
+
+.cesium-status-scaleLBarBG {
+    left: 0px;
+}
+
+.cesium-status-scaleRBarBG {
+    right: 0px;
+}
+
+.cesium-status-scaleTxt {
+    text-align: center;
+    color: #000;
+    width: 100%;
+    cursor: default;
+    line-height: 22px;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff
+}
+
+.cesium-status-scaleTxt.dark {
+    color: #fff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+}
